@@ -68,4 +68,24 @@ class TestCase extends \Orchestra\Testbench\TestCase
             $this->assertTrue(Schema::hasColumn($table, $column));
         });
     }
+
+    /**
+     * Assert that given FQCN is exist
+     * @param  string $class_name Fully Qualified Class Name
+     * @return void
+     */
+    public function assertClassExist($class_name)
+    {
+        $this->assertTrue(class_exists($class_name));
+    }
+
+    /**
+     * Assert that given helper name exist
+     * @param  string $helper 
+     * @return void
+     */
+    public function assertHelperExist($helper)
+    {
+        $this->assertTrue(function_exists($helper));
+    }
 }
