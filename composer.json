@@ -1,7 +1,7 @@
 {
     "name": "cleaniquecoders/laravel-observers",
-    "description": "Built with Laravel Standalone Package Creator",
-    "keywords": ["package", "laravel"],
+    "description": "A collection of observer classes that can be use in your Laravel application.",
+    "keywords": ["package", "laravel", "observer", "hashids", "reference", "hashslug"],
     "license": "MIT",
     "authors": [
         {
