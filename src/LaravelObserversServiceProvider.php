@@ -18,7 +18,7 @@ class LaravelObserversServiceProvider extends ServiceProvider
             __DIR__ . '/config/document.php'  => config_path('document.php'),
             __DIR__ . '/config/hashids.php'   => config_path('hashids.php'),
             __DIR__ . '/config/observers.php' => config_path('observers.php'),
-        ], 'observers');
+        ], 'laravel-observers');
         $this->mergeConfigFrom(
             __DIR__ . '/config/observers.php', 'observers'
         );
