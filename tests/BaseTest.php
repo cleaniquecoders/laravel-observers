@@ -7,7 +7,7 @@ class BaseTest extends TestCase
 	/** @test */
 	public function it_has_helpers()
 	{
-		foreach (['abbrv', 'generate_sequence', 'generate_reference', 'hashids'] as $helper) {
+		foreach (['generate_reference', 'hashids'] as $helper) {
 			$this->assertHelperExist($helper);
 		}
 	}
