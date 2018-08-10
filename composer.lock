@@ -4,8 +4,63 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a03ae99f0fb4ac3264e7314b693c59f",
+    "content-hash": "3a0cfe08c363ccba66d3a6d44d1ca66e",
     "packages": [
+        {
+            "name": "cleaniquecoders/laravel-helper",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cleaniquecoders/laravel-helper.git",
+                "reference": "47b4e50fefb428f14cac300dc6da57ac79ac5701"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cleaniquecoders/laravel-helper/zipball/47b4e50fefb428f14cac300dc6da57ac79ac5701",
+                "reference": "47b4e50fefb428f14cac300dc6da57ac79ac5701",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.5|^5.6",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.5.*|3.6.*",
+                "phpunit/phpunit": "^6.5|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "CleaniqueCoders\\LaravelHelper\\LaravelHelperServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CleaniqueCoders\\LaravelHelper\\": "src/"
+                },
+                "files": [
+                    "src/Support/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nasrul Hazim",
+                    "email": "nasrulhazim.m@gmail.com"
+                }
+            ],
+            "description": "Built with Laravel Standalone Package Creator",
+            "keywords": [
+                "laravel",
+                "package"
+            ],
+            "time": "2018-08-10T07:34:39+00:00"
+        },
         {
             "name": "doctrine/inflector",
             "version": "v1.3.0",
