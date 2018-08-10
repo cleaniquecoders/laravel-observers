@@ -66,11 +66,21 @@ if (! function_exists('generate_reference')) {
 }
 
 /*
+ * Get Slug Name for Fully Qualified Class Name (FQCN)
+ */
+if (! function_exists('str_slug_fqcn')) {
+    function str_slug_fqcn($object)
+    {
+        return strtolower(str_replace('\\', '-', get_class($object)));
+    }
+}
+
+/*
  * Hashids Helper
  */
 if (! function_exists('hashids')) {
-    function hashids(?string $salt = null, ?int $length = null, ?string $alphabet = null): \App\Services\Hashids
+    function hashids(?string $salt = null, ?int $length = null, ?string $alphabet = null): \CleaniqueCoders\LaravelObservers\Services\Hashids
     {
-        return \App\Services\Hashids::make($salt, $length, $alphabet);
+        return \CleaniqueCoders\LaravelObservers\Services\Hashids::make($salt, $length, $alphabet);
     }
 }
