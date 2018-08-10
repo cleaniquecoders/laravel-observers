@@ -15,18 +15,18 @@ class LaravelObserversServiceProvider extends ServiceProvider
          * Configuration
          */
         $this->publishes([
-            __DIR__ . '/config/document.php'  => config_path('document.php'),
-            __DIR__ . '/config/hashids.php'   => config_path('hashids.php'),
-            __DIR__ . '/config/observers.php' => config_path('observers.php'),
+            __DIR__ . '/../config/document.php'  => config_path('document.php'),
+            __DIR__ . '/../config/hashids.php'   => config_path('hashids.php'),
+            __DIR__ . '/../config/observers.php' => config_path('observers.php'),
         ], 'laravel-observers');
         $this->mergeConfigFrom(
-            __DIR__ . '/config/observers.php', 'observers'
+            __DIR__ . '/../config/observers.php', 'observers'
         );
         $this->mergeConfigFrom(
-            __DIR__ . '/config/document.php', 'document'
+            __DIR__ . '/../config/document.php', 'document'
         );
         $this->mergeConfigFrom(
-            __DIR__ . '/config/hashids.php', 'hashids'
+            __DIR__ . '/../config/hashids.php', 'hashids'
         );
 
         \CleaniqueCoders\LaravelObservers\Observers\Kernel::make()->observes();
