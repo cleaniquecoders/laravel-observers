@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a275e4c0d02cc684f165e4752a66b78",
+    "content-hash": "16aada1844b130e575ec298b348bc3c1",
     "packages": [
         {
             "name": "cleaniquecoders/laravel-helper",
@@ -3961,7 +3961,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.1"
+        "php": ">=7.2"
     },
     "platform-dev": []
 }
