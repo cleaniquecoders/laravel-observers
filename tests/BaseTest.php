@@ -13,6 +13,12 @@ class BaseTest extends TestCase
     }
 
     /** @test */
+    public function it_has_config()
+    {
+        $this->assertTrue(!empty(config('observers')));
+    }
+
+    /** @test */
     public function it_has_observer_kernel_class()
     {
         $this->assertClassExist(\CleaniqueCoders\LaravelObservers\Observers\Kernel::class);
@@ -22,6 +28,12 @@ class BaseTest extends TestCase
     public function it_has_hashid_observer_class()
     {
         $this->assertClassExist(\CleaniqueCoders\LaravelObservers\Observers\HashidsObserver::class);
+    }
+
+    /** @test */
+    public function it_has_uuid_observer_class()
+    {
+        $this->assertClassExist(\CleaniqueCoders\LaravelObservers\Observers\UuidObserver::class);
     }
 
     /** @test */
