@@ -15,7 +15,7 @@ class BaseTest extends TestCase
     /** @test */
     public function it_has_config()
     {
-        $this->assertTrue(!empty(config('observers')));
+        $this->assertTrue(! empty(config('observers')));
     }
 
     /** @test */

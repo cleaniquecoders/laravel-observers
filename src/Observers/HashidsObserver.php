@@ -23,8 +23,8 @@ class HashidsObserver
     {
         // we only create this once
         if (Schema::hasColumn($model->getTable(), 'hashslug') && is_null($model->hashslug)) {
-            $timestamp       = time() + $model->count() + 1;
-            $str_slug_fqcn   = str_slug_fqcn($model);
+            $timestamp = time() + $model->count() + 1;
+            $str_slug_fqcn = str_slug_fqcn($model);
             $model->hashslug = hashids($str_slug_fqcn)->encode($timestamp);
         }
     }

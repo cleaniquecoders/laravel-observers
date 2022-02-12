@@ -28,10 +28,10 @@ class Hashids
      */
     public static function make(?string $salt, ?int $length, ?string $alphabet)
     {
-        $salt     = is_null($salt) ? config('hashids.salt') : config('hashids.salt') . $salt;
-        $length   = $length   ?? config('hashids.length');
+        $salt = is_null($salt) ? config('hashids.salt') : config('hashids.salt') . $salt;
+        $length = $length ?? config('hashids.length');
         $alphabet = $alphabet ?? config('hashids.alphabet');
-        $salt     = \Illuminate\Support\Facades\Hash::make($salt);
+        $salt = \Illuminate\Support\Facades\Hash::make($salt);
 
         return new self($salt, $length, $alphabet);
     }

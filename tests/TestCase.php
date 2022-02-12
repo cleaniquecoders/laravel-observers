@@ -60,9 +60,9 @@ class TestCase extends \Orchestra\Testbench\TestCase
         // Setup default database to use sqlite :memory:
         $app['config']->set('database.default', 'testbench');
         $app['config']->set('database.connections.testbench', [
-            'driver'   => 'sqlite',
+            'driver' => 'sqlite',
             'database' => ':memory:',
-            'prefix'   => '',
+            'prefix' => '',
         ]);
     }
 
@@ -84,7 +84,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
      */
     protected function assertTableHasColumns($table, $columns)
     {
-        collect($columns)->each(function($column) use ($table) {
+        collect($columns)->each(function ($column) use ($table) {
             $this->assertTrue(Schema::hasColumn($table, $column));
         });
     }
