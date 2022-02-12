@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/cleaniquecoders/laravel-observers.svg?branch=master)](https://travis-ci.org/cleaniquecoders/laravel-observers) [![Latest Stable Version](https://poser.pugx.org/cleaniquecoders/laravel-observers/v/stable)](https://packagist.org/packages/cleaniquecoders/laravel-observers) [![Total Downloads](https://poser.pugx.org/cleaniquecoders/laravel-observers/downloads)](https://packagist.org/packages/cleaniquecoders/laravel-observers) [![License](https://poser.pugx.org/cleaniquecoders/laravel-observers/license)](https://packagist.org/packages/cleaniquecoders/laravel-observers)
+[![Latest Stable Version](https://poser.pugx.org/cleaniquecoders/laravel-observers/v/stable)](https://packagist.org/packages/cleaniquecoders/laravel-observers) [![Total Downloads](https://poser.pugx.org/cleaniquecoders/laravel-observers/downloads)](https://packagist.org/packages/cleaniquecoders/laravel-observers) [![License](https://poser.pugx.org/cleaniquecoders/laravel-observers/license)](https://packagist.org/packages/cleaniquecoders/laravel-observers)
 
 ## About Your Package
 
