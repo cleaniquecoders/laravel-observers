@@ -16,8 +16,6 @@ class HashidsObserver
 {
     /**
      * Listen to the creating event.
-     *
-     * @param \Illuminate\Database\Eloquent\Model $model
      */
     public function creating(Model $model)
     {
