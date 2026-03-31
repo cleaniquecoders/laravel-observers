@@ -1,0 +1,5 @@
+<?php
+
+use CleaniqueCoders\LaravelObservers\Tests\TestCase;
+
+uses(TestCase::class)->in(__DIR__);
