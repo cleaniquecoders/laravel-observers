@@ -11,7 +11,7 @@ class Kernel
      */
     public static function make()
     {
-        return new self();
+        return new self;
     }
 
     /**

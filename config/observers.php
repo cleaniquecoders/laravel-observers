@@ -1,7 +1,11 @@
 <?php
 
+use CleaniqueCoders\LaravelObservers\Observers\HashidsObserver;
+use CleaniqueCoders\LaravelObservers\Observers\ReferenceObserver;
+use CleaniqueCoders\LaravelObservers\Observers\UuidObserver;
+
 return [
-    \CleaniqueCoders\LaravelObservers\Observers\ReferenceObserver::class => [],
-    \CleaniqueCoders\LaravelObservers\Observers\HashidsObserver::class => [],
-    \CleaniqueCoders\LaravelObservers\Observers\UuidObserver::class => [],
+    ReferenceObserver::class => [],
+    HashidsObserver::class => [],
+    UuidObserver::class => [],
 ];

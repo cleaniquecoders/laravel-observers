@@ -2,12 +2,15 @@
 
 namespace CleaniqueCoders\LaravelObservers\Tests;
 
+use CleaniqueCoders\LaravelObservers\LaravelObserversServiceProvider;
+use Illuminate\Foundation\Application;
+
 class TestCase extends \Orchestra\Testbench\TestCase
 {
     /**
      * Setup the test environment.
      */
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -19,7 +22,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     /**
      * Assert that given FQCN is exist.
      *
-     * @param  string  $class_name Fully Qualified Class Name
+     * @param  string  $class_name  Fully Qualified Class Name
      */
     public function assertClassExist($class_name)
     {
@@ -39,20 +42,20 @@ class TestCase extends \Orchestra\Testbench\TestCase
     /**
      * Load Package Service Provider.
      *
-     * @param  \Illuminate\Foundation\Application  $app
+     * @param  Application  $app
      * @return array List of Service Provider
      */
     protected function getPackageProviders($app)
     {
         return [
-            \CleaniqueCoders\LaravelObservers\LaravelObserversServiceProvider::class,
+            LaravelObserversServiceProvider::class,
         ];
     }
 
     /**
      * Define environment setup.
      *
-     * @param  \Illuminate\Foundation\Application  $app
+     * @param  Application  $app
      */
     protected function getEnvironmentSetUp($app)
     {
@@ -68,7 +71,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     /**
      * Assert the current database has table.
      *
-     * @param  string  $table table name
+     * @param  string  $table  table name
      */
     protected function assertHasTable($table)
     {
@@ -78,8 +81,8 @@ class TestCase extends \Orchestra\Testbench\TestCase
     /**
      * Assert the table has columns defined.
      *
-     * @param  string  $table   table name
-     * @param  array  $columns list of columns
+     * @param  string  $table  table name
+     * @param  array  $columns  list of columns
      */
     protected function assertTableHasColumns($table, $columns)
     {

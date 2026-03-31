@@ -1,5 +1,9 @@
 <?php
 
+use Carbon\Carbon;
+use CleaniqueCoders\LaravelObservers\Services\Hashids;
+use Illuminate\Support\Str;
+
 /*
  * Get Reference
  *
@@ -13,12 +17,12 @@ if (! function_exists('generate_reference')) {
             $reference_number[] = abbrv($word);
         }
 
-        $reference_number[] = \Carbon\Carbon::now()->format('Y/m/d');
+        $reference_number[] = Carbon::now()->format('Y/m/d');
 
-        if (false != $count) {
+        if ($count != false) {
             $reference_number[] = generate_sequence($count);
         } else {
-            $reference_number[] = strtoupper(\Illuminate\Support\Str::random(config('document.sequence_length')));
+            $reference_number[] = strtoupper(Str::random(config('document.sequence_length')));
         }
 
         return implode('/', $reference_number);
@@ -29,8 +33,8 @@ if (! function_exists('generate_reference')) {
  * Hashids Helper
  */
 if (! function_exists('hashids')) {
-    function hashids(?string $salt = null, ?int $length = null, ?string $alphabet = null): CleaniqueCoders\LaravelObservers\Services\Hashids
+    function hashids(?string $salt = null, ?int $length = null, ?string $alphabet = null): Hashids
     {
-        return \CleaniqueCoders\LaravelObservers\Services\Hashids::make($salt, $length, $alphabet);
+        return Hashids::make($salt, $length, $alphabet);
     }
 }

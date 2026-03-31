@@ -3,6 +3,7 @@
 namespace CleaniqueCoders\LaravelObservers\Services;
 
 use Hashids\Hashids as HashidsProvider;
+use Illuminate\Support\Facades\Hash;
 
 /**
  * Hashids Service.
@@ -31,7 +32,7 @@ class Hashids
         $salt = is_null($salt) ? config('hashids.salt') : config('hashids.salt').$salt;
         $length = $length ?? config('hashids.length');
         $alphabet = $alphabet ?? config('hashids.alphabet');
-        $salt = \Illuminate\Support\Facades\Hash::make($salt);
+        $salt = Hash::make($salt);
 
         return new self($salt, $length, $alphabet);
     }

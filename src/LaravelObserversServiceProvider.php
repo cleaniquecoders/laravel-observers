@@ -2,6 +2,7 @@
 
 namespace CleaniqueCoders\LaravelObservers;
 
+use CleaniqueCoders\LaravelObservers\Observers\Kernel;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelObserversServiceProvider extends ServiceProvider
@@ -32,13 +33,11 @@ class LaravelObserversServiceProvider extends ServiceProvider
             'hashids'
         );
 
-        \CleaniqueCoders\LaravelObservers\Observers\Kernel::make()->observes();
+        Kernel::make()->observes();
     }
 
     /**
      * Register the application services.
      */
-    public function register()
-    {
-    }
+    public function register() {}
 }
